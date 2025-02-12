@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs"
+    Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>K & K Electronics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link href="css/Custome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+     <style>
+       
+     .navbar
+     {
+         background-color:#B9B4C7;
+                        
+     }
+     
+     .body
+     {
+         
+         background-color:#F5E8DD;
+         
+     }
+    
+         
+ 
+  </style>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <div>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="Default.aspx"><span>
+                        <img src="img/logo_1.png" alt="MyEShoppoing" height="30" /></span><b>K & K Electronics</b>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="<%--active--%>"><a href="AdminHome.aspx">Home</a> </li>
+                       <%-- <li><a href="About.aspx">About</a> </li>
+                        <li><a href="#">Contact US</a> </li>--%>
+                        <li><a href="AddProduct.aspx">Add Product</a> </li>
+                        <%--<li><a href="#">Blog-</a> </li>--%>
+                        <li><a href="Report.aspx">Report</a> </li>
+                        <li class="drodown">
+                       
+                            
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Product
+                                <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddBrand.aspx">Add Brand</a> </li>
+                                <li><a href="AddCategory.aspx">Add Category</a> </li>
+                                <li><a href="Addsubcategry.aspx">Add SubCategory</a> </li>
+                                <li><a href="AddSize.aspx">Add Size</a> </li>
+                                
+                                <li role="separator" class="divider "></li>
+                                <li><a href="EditBrand.aspx">Edit Brand</a> </li>
+                                <li><a href="Editcatagory.aspx">Edit Category</a> </li>
+                                <li><a href="EditSubCatagory.aspx">Edit SubCategory</a> </li>
+                                <li><a href="EditSize.aspx">Edit Size</a> </li>
+                                
+                                <%--<li role="separator" class="divider "></li>--%>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <asp:Button ID="btnAdminlogout" CssClass="btn btn-default navbar-btn " runat="server"
+                                Text="Sign Out" onclick="btnAdminlogout_Click" />
+                        </li>
+                        <%--<li id="btnSignUP" runat="server"><a href="SignUp.aspx">SignUp</a> </li>
+                        <li id="btnSignIN" runat="server"><a href="SignIn.aspx">SignIn</a> </li>
+                        --%>
+                         <%--<li>
+                            <asp:Button ID="btnlogout" CssClass="btn btn-default navbar-btn " runat="server"
+                                Text="Sign Out" OnClick="btnlogout_Click" />
+                        </li>--%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br /><br />
+
+    <asp:Label ID="lblSuccess" runat="server" CssClass="text-success"></asp:Label>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+  
+    </form>
+     <!---Footer COntents Start here---->
+    <hr />
+    <footer>
+            <div class ="container ">
+               
+                <p class ="pull-right "><a href ="Default.aspx">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a></p>
+                <%--<p class ="pull-right "><a href="AdminHome.aspx"> Admin Login  </a></p> --%> 
+                <p>&copy;2024 K & K Electronics.in &middot; <a href ="Default.aspx">Home</a>&middot;<a href ="About.aspx">About</a>&middot;<a href ="#">Contact</a>&middot;<a href ="Product.aspx">Products</a> </p>
+            </div>
+
+        </footer>
+    <!---Footer COntents End---->
+</body>
+</html>
